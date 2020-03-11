@@ -33,7 +33,7 @@ pipeline {
 			agent {
 				docker {
 					image 'cdrx/pyinstaller-linux:python3'
-					args '-v /var/jenkins_home/workspace/simple-python-pyinstaller-app/sources'
+					args 'docker run -v "/var/jenkins_home/workspace/simple-python-pyinstaller-app/sources:/src/" --name pyinstaller cdrx/pyinstaller-linux:python2 "pyinstaller add2vals.py -y"'
 				}
 			}
 			steps {
