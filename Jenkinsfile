@@ -33,7 +33,7 @@ pipeline {
 			agent {
 				docker {
 					image 'cdrx/pyinstaller-linux:python3'
-					args '-v /home/pigstah/Projects/devops-test/simple-python-pyinstaller-app/sources cdrx/pyinstaller-linux:python3 "pyinstaller add2vals.py -y"'
+					args 'pyinstaller source/add2vals.py -y'
 				}
 			}
 			steps {
