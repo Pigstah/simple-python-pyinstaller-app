@@ -34,7 +34,7 @@ pipeline {
 				docker {
 					image 'cdrx/pyinstaller-linux:python3'
 					args '-v /var/jenkins_home/workspace/simple-python-pyinstaller-app/sources'
-					args 'spyinstaller add2vals.py -y'
+					args '"pyinstaller add2vals.py -y"'
 				}
 			}
 			steps {
